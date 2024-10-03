@@ -1,309 +1,350 @@
-/* INDEX.HTML */
-/* https://stackoverflow.com/questions/21590343/how-to-display-a-gif-fullscreen-for-a-webpage-background*/
-body {
-    /*background-image:url('images/pink-stars.gif');
-    background-image: url('images/pink-stars-img.jpg');
-    background-size: 120%;
-    background-repeat: repeat-y;
-    background-attachment: fixed; */
-    height: 100%;
+/* styles.css */
+
+/*---------- FONTS -------------------------------------------------------------------------*/
+@font-face {
+    font-family: 'Arial Narrow';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Arial Narrow'), url('fonts/ARIALN.woff') format('woff');
+ }
+
+ @font-face {
+    font-family: 'Trade Gothic LT Std Bold Condensed No. 20';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Trade Gothic LT Std Bold Condensed No. 20'), url('fonts/trade-gothic-lt-std-bold-condensed-no-20-5872def1d27d8.woff') format('woff');
+    }
+
+/*---------- TV -------------------------------------------------------------------------*/
+.tv-holder {
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     width: 100%;
-    justify-content: center;
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
 }
 
-/* holds the cellphone container css*/
-.holder {
+/* casing of the tv */
+.casing {
+    background-color: #8B8D90;
+    width: 1200px;
+    height: 700px;
+    display: flex;
     position: relative;
-    width: 400px;
-    height: 450px;
-    display: flex;
     justify-content: center;
-    align-items: flex-start;
-    margin-left: 50px;
-    margin-top: 45px;
+    border-radius: 20px; 
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.5), 
+        inset 0 -5px 15px rgba(45, 39, 39, 0.2); 
 }
 
-/* the screen of the phone case */
+/* screen of the tv */
 .screen {
-    background-image: linear-gradient(to right, rgb(143, 206, 221) 0%, rgb(143, 206, 221) 50%, rgb(167, 219, 241) 75%, rgb(82, 94, 176) 100%);
-    width: 300px;
-    height: 450px;
-    border-radius: 5px;
+    background-color: #000000;
+    width: 1100px;
+    height: 600px;
+    margin-top: 40px;
+    border-radius: 20px; 
+    margin-left: 5px;
+    z-index: 5;
     position: relative;
-    z-index: 5; /* https://stackoverflow.com/questions/9724035/how-can-one-create-an-overlay-in-css */
-    color: white;
-    display: flex;
-    margin: 5;
-    padding: 5;
-
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: flex-start; 
-
-    font-size: 20px;
-    font-family: "Nunito", sans-serif; 
-    font-weight: 800;
-    align-items: flex-start;
-    text-align: left;
-    padding: 5px;
 }
 
-/* cover of the phone case */
-.cover {
-    color:palevioletred;
-    border: 5px solid palevioletred;
-    border-radius: 8px;
-    width: 400px;
+/* tv stand */
+.stand {
+    background-color: #8B8D90;
+    width: 250px;
     height: 500px;
-    background-color: palevioletred;
-    z-index: 4;
-    position: relative;
-    margin-top: -25px;
-}
-
-/* frame of the phone case (top) */
-.frame-cover {
-    color:rgb(228, 192, 209);
-    border: 5px solid rgb(228, 192, 209);
-    border-radius: 8px;
-    width: 350px;
-    height: 460px;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(228, 192, 209);
-    z-index: 6;
+    bottom: 0;
+    margin: 0 auto;
+    left: 50%;
     display: flex;
     position: absolute;
-}
-
-/* frame of the phone case (bottom) */
-.frame-hinge {
-    color:rgb(228, 192, 209);
-    border: 5px solid rgb(228, 192, 209);
-    border-radius: 90px;
-    width: 310px;
-    height: 320px;
-    bottom: 30px;
-    left: 40px;
     justify-content: center;
-    align-items: center;
-    background-color: rgb(228, 192, 209);
-    z-index: 5;
-    display: flex;
-    position: absolute;
+    border-radius: 20px; 
+    z-index: 1;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.5), 
+        inset 0 -5px 15px rgba(45, 39, 39, 0.2); 
 }
 
-/* hinge of the phone case */
-.hinge {
-    width: 160px;
-    height: 100px;
-    background:palevioletred;
-    position: absolute;
-    border-radius: 50%;
-    left: 50%; 
-    transform: translateX(-50%);
-    bottom: -90px;
-}
-
-/* cover of the phone case, where the buttons are */
-.cover-buttons {
+/* tv stand base */
+.stand-base {
+    background-color: #8B8D90;
     width: 400px;
-    height: 400px;
-    background:palevioletred;
-    justify-content: center;
-    align-items: center;
+    height: 50px;
+    bottom: 0;
+    margin: 0 auto;
+    left: 45%;
+    display: flex;
     position: absolute;
-    top: 500px;
-    bottom: -100px;
-    z-index: 5;
-    border-radius: 90px;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.5), 
+        inset 0 -5px 15px rgba(45, 39, 39, 0.2); 
 }
 
-/* bigger circle button (ok, menu, etc.)*/
-.circle-nav-button {
-    width: 150px;
-    height: 150px;
-    background-color: rgb(163, 193, 157);
-    border-radius: 50%;
+/* directional pov square for the base */
+.stand-pov {
+    background-color: #8B8D90;
+    width: 300px;
+    height: 30px;
+    bottom: 0;
+    z-index: 2;
+    border-radius: 30%;
+    margin: 0 auto;
+    left: 48%;
+    display: flex;
     position: absolute;
+    justify-content: center;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.5), 
+        inset 0 -5px 15px rgba(45, 39, 39, 0.2); 
+}
+
+/*---------- TITLES ON IMAGE -------------------------------------------------------------------------*/
+.screen h1 {
+    color: rgb(255, 255, 255);
     z-index: 7;
-    left: 50%; 
-    top: 10%;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 10px rgba(85, 100, 82, 0.3);
-    transform: translateX(-50%);
-    bottom: 50px;
-    color: grey;
-}
-
-/* tinier circle button (menu/ok) */
-.home-circle-button {
-    width: 75px;
-    height: 75px;
-    background-color: rgb(177, 126, 151);
-    box-shadow: 0px 4px 10px rgba(110, 84, 97, 0.5); 
-    border-radius: 50%;
+    font-size: 30pt;
+    font-family: 'Trade Gothic LT Std Bold Condensed No. 20', Arial, sans-serif;
     position: absolute;
-    left: 50%; 
-    transform: translate(-50%, 0);
-    margin-top: 38px;
-    color: rgba(67, 62, 62, 0.5);
-    z-index: 6;
-    text-align: center;
-    font-size: 20px;
-    font-family: "Nunito", sans-serif; 
-    font-weight: 800;
-    line-height: 8px;
-    transition: transform 0.3s ease;
+    left: 5%;
+    top: 2%;
 }
 
-.home-circle-button:hover {
-    transform: translate(-50%, 3px) scale(1.05);
-}
-
-.home-circle-button a {
-    text-decoration: none;
-    color: rgba(67, 62, 62, 0.5);
-}
-
-.home-circle-button a:hover {
-    text-decoration: none;
-    color: rgb(61, 56, 56);
-}
-
-.home-circle-button a:visited {
-    text-decoration: none;
-    color: rgb(61, 56, 56);
-}
-
-/* nav buttons on the home circle button (holder) */
-.nav-buttons {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgba(67, 62, 62, 0.5);
-    font-family: "Nunito", sans-serif; 
-    font-weight: 800;
-    z-index: 8;
-    font-size:12px;
-}
-
-/* nav buttons on the home circle button */
-.nav-button {
-    width: 70px;
-    height: 25px;
-    border-radius: 100px 100px 0 0; 
+.screen p {
+    color: rgb(255, 255, 255);
+    z-index: 7;
+    font-size: 15pt;
+    font-family: 'Arial Narrow', Arial, sans-serif;
     position: absolute;
-    z-index: 9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    left: 5%;
 }
 
-/* nav-button positions*/
-
-/* top button */
-.nav-button.up {
-    top: -20px;
-    text-align: justify;
+#welcome {
+    top: 15%;
 }
 
-.nav-button.up:hover {
-    transform: scale(1.1) rotate(0deg);
+#welcome-cont {
+    top: 20%;
 }
 
-.nav-button.up a {
-    text-decoration: none;
-    color: rgba(67, 62, 62, 0.5);
-}
+/*---------- CHANNEL 1 - RESUME -------------------------------------------------------*/
 
-.nav-button.up a:hover {
-    text-decoration: none;
-    color: rgb(61, 56, 56);
-}
-
-.nav-button.up a:visited {
-    text-decoration: none;
-    color: rgb(61, 56, 56);
-}
-
-/* bottom button */
-.nav-button.down {
-    bottom: 85px;
+#channel-one-number {
+    color: #0d2a7f;
+    z-index: 7;
+    font-size: 15pt;
+    font-weight: bolder;
+    left: 5%;
+    bottom: 42%;
     position: absolute;
-    width: 70px;
-    height: 25px;
-    display: flex;
-    transform: rotate(180deg);
-    pointer-events: auto;
+    font-family: 'Arial Narrow', Arial, sans-serif;
 }
 
-.nav-button.down a {
-    display: flex;
+#channel-one-pgrm {
+    color: #0d2a7f;
+    z-index: 7;
+    font-size: 15pt;
+    font-weight: bolder;
+    left: 5%;
+    bottom: 39%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+#resume {
+    color:rgb(255, 255, 255);
+    z-index: 7;
+    font-size: 15pt;
+    left: 22%;
+    font-weight: bolder;
+    bottom: 41%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+/*---------- CHANNEL TWO - ABOUT -------------------------------------------------------*/
+
+#channel-two-number {
+    color: #0d2a7f;
+    z-index: 7;
+    font-size: 15pt;
+    font-weight: bolder;
+    left: 5%;
+    bottom: 33%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+#channel-two-pgrm {
+    color: #0d2a7f;
+    z-index: 7;
+    font-size: 15pt;
+    font-weight: bolder;
+    left: 5%;
+    bottom: 30%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+#about {
+    color: #0d2a7f;
+    z-index: 7;
+    font-size: 15pt;
+    left: 22%;
+    font-weight: bolder;
+    bottom: 32%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+/*---------- CHANNEL THREE - PROJECTS -------------------------------------------------------*/
+
+#channel-three-number {
+    color: #0d2a7f;
+    z-index: 7;
+    font-size: 15pt;
+    font-weight: bolder;
+    left: 5%;
+    bottom: 24%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+#channel-three-pgrm {
+    color: #0d2a7f;
+    z-index: 7;
+    font-size: 15pt;
+    font-weight: bolder;
+    left: 5%;
+    bottom: 21%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+#project {
+    color: #0d2a7f;
+    z-index: 7;
+    font-size: 15pt;
+    left: 22%;
+    font-weight: bolder;
+    bottom: 23%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/*---------- IMAGE SETTINGS (GUIDE)  -------------------------------------------------------*/
+.screen img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(180deg);
-    text-decoration: none;
-    color: rgba(67, 62, 62, 0.5);
+    z-index: 4; 
 }
 
-.nav-button.down:hover {
-    transform: scale(1.1) rotate(180deg);
+/*---------- SPOTIFY EMBED  -------------------------------------------------------*/
+/* spotify player embed */
+#embed-iframe {
+    width: 100%;
+    height: 100%;
 }
 
-.nav-button.down a:hover {
-    text-decoration: none;
-    color: rgb(61, 56, 56);
+.spotify-embed {
+    position: absolute;
+    top: 20px;  
+    right: 380px;  
+    width: 100px;  
+    height: 230px;
+    z-index: 6;
 }
 
-.nav-button.down a:visited {
-    text-decoration: none;
-    color: rgb(61, 56, 56);
+/*---------- REMOTE -------------------------------------------------------------------------*/
+.remote-holder {
+    position: absolute; 
+    top: 160px; 
+    left: 10px; 
+    z-index: 7; 
 }
 
-
-/* left button */
-.nav-button.left {
+.button-holder {
+    position: absolute;
+    top: 10px;
     left: 10px;
-    top: 35px;
-    transform: rotate(-90deg);
 }
 
-.nav-button.left p {
-    writing-mode: vertical-rl; 
-    transform: rotate(180deg);
+.number-holder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
 }
 
-
-.nav-button.left:hover {
-    transform: scale(1.1) rotate(-90deg);
+.power-button-remote {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(168, 50, 50);
+    box-shadow: 0px 4px 10px rgba(94, 32, 29, 0.5); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* right button */
-.nav-button.right {
-    right: 10px;
-    top: 35px;
-    transform: rotate(90deg);
+.power-button-remote:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 15px rgba(33, 53, 89, 0.7); 
 }
 
-.nav-button.right:hover {
-    transform: scale(1.1) rotate(90deg);
+.num-button {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(63, 104, 192);
+    box-shadow: 0px 4px 10px rgba(33, 53, 89, 0.5); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: 'Trade Gothic LT Std Bold Condensed No. 20', Arial, sans-serif;
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
+.num-button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 15px rgba(33, 53, 89, 0.7); 
+    background-color: rgb(48, 83, 159);
+}
 
-/* FONTS */
-.nunito {
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+.num-button a, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.num-button a:hover {
+    text-decoration: none;
+    transform: scale(1.1); 
+    transition: background-color 0.3s ease;
+}
+
+.remote-casing {
+    background-color: #434445;
+    width: 250px; 
+    height: 550px;
+    border-radius: 20px; 
+    box-shadow: 
+        0 5px 15px rgba(0, 0, 0, 0.5), 
+        inset 0 -5px 10px rgba(255, 255, 255, 0.1); 
+    position: relative; 
+    z-index: 6;
 }

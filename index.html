@@ -1,59 +1,96 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Portfolio</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="author" href="humans.txt"/>
+    <script src="https://kit.fontawesome.com/986fc10363.js" crossorigin="anonymous"></script>
+</head>
+<body>
 
-        <!-- fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div class="holder">
-            <div class="cover"></div>
-            <div class="frame-cover">
-                <div class="screen">
-                    <p>WELCOME TO MY PORTFOLIO!</p>
-                    <p style="text-align: center;">Use the navigation buttons below to get to the different parts of my site.</p>
+    <div class="tv-holder">
+        <div class="casing">
+            <div class="screen">
+                <div class="spotify-embed">
+                    <div id="embed-iframe"></div>
                 </div>
+                <h1>Portfolio</h1>
+                <p id="welcome">Welcome, use the numbered buttons on the TV remote to navigate the site!</p>
+                <p id="welcome-cont">(Use the channel guide below.)</p>
+
+                <h2 id="resume">Resume</h2>
+                <h2 id="about">About</h2>
+                <h2 id="project">Projects</h2>
+
+                <h3 id="channel-one-number">1</h3>
+                <h3 id="channel-one-pgrm">RES</h3>
+
+                <h3 id="channel-two-number">2</h3>
+                <h3 id="channel-two-pgrm">ABT</h3>
+
+                <h3 id="channel-three-number">3</h3>
+                <h3 id="channel-three-pgrm">PRJ</h3>
+            
+                
+                <img src="images/dish_network_tv_guide_edited.png" alt="TV Guide Background" width="100%", height="100%">
             </div>
+        </div>
+        <div class="stand"></div>
+        <div class="stand-base"></div>
+        <div class="stand-pov"></div>
+    </div>
 
-            <div class="hinge"></div>
-            <div class="cover-buttons">
-                <div class="frame-hinge">
-                    <div class="circle-nav-button">
-                        <div class="home-circle-button">
-                            <a href="index.html"><p>MENU</p></a>
-                            <a href="index.html"><p>OK</p></a>
-                        </div>
+    <div class="remote-holder">
+        <div class="remote-casing">
+            <div class="button-holder">
+                <div class="power-button-remote">
+                    <i class="fa-solid fa-power-off fa-xl" style="color: #ffffff;"></i>
+                </div>
+                <div class="number-holder">
+                    <div class="num-button">
+                        <a href="about.html">1</a>
                     </div>
-
-                    <div class="nav-buttons">
-                        <div class="nav-button up">
-                            <a href="about.html"><p>About Me</p></a>
-                        </div>
-                        <div class="nav-button down">
-                            <a href="pdf/Amelie Willett Resume.pdf" target="_blank"><p>Resume</p></a>
-                        </div>
-                        <div class="nav-button left"></div>
-                        <div class="nav-button right"></div>
+                    <div class="num-button">
+                        <a href="about.html">2</a>
+                    </div>
+                    <div class="num-button">
+                        <a href="projects.html">3</a>
+                    </div>
+                    <div class="num-button">
+                        <p>4</p>
+                    </div>
+                    <div class="num-button">
+                        <p>5</p>
+                    </div>
+                    <div class="num-button">
+                        <p>6</p>
+                    </div>
+                    <div class="num-button">
+                        <p>7</p>
+                    </div>
+                    <div class="num-button">
+                        <p>8</p>
+                    </div>
+                    <div class="num-button">
+                        <p>9</p>
+                    </div>
+                    <div class="num-button" style="grid-column: 2; grid-row: 4;">
+                        <p>0</p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!--<script src="" async defer></script>-->
-    </body>
+    </div>
+
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    <script src="music.js"></script>
+        <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+</body>
 </html>

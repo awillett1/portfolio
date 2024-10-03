@@ -1,0 +1,13 @@
+                           
+/* TEAM */                      
+Amelie Willett
+							
+/* IMAGES */
+Network TV Image
+Designed by: cheez-it-burger on DeviantArt
+Link: https://www.deviantart.com/cheez-it-burger/gallery
+
+/* SITE */                    
+Last update: 2025/2/10                   
+Standards: HTML5                     
+Software: Visual Studio Code
