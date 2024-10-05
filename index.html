@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="author" href="humans.txt"/>
     <script src="https://kit.fontawesome.com/986fc10363.js" crossorigin="anonymous"></script>
+    <script src="time.js"></script>
 </head>
 <body>
 
@@ -21,6 +22,7 @@
                 <h1>Portfolio</h1>
                 <p id="welcome">Welcome, use the numbered buttons on the TV remote to navigate the site!</p>
                 <p id="welcome-cont">(Use the channel guide below.)</p>
+                <p id="welcome-cont" style="top:30%;"">If you ever want to return to the home page, press "GUIDE" on the remote!</p>
 
                 <h2 id="resume">Resume</h2>
                 <h2 id="about">About</h2>
@@ -34,6 +36,13 @@
 
                 <h3 id="channel-three-number">3</h3>
                 <h3 id="channel-three-pgrm">PRJ</h3>
+
+                <h3 id="my-channels"><span id="green-light">My Channels</span> Press 'GUIDE'!</h3>
+                <h3 id="all-time">Loading...</h3>
+                <h3 id="time">Loading...</h3>
+                <h3 id="cur-hour">Loading...</h3>
+                <h3 id="thirty-min">Loading...</h3>
+                <h3 id="one-hour">Loading...</h3>
             
                 
                 <img src="images/dish_network_tv_guide_edited.png" alt="TV Guide Background" width="100%", height="100%">
@@ -49,6 +58,9 @@
             <div class="button-holder">
                 <div class="power-button-remote">
                     <i class="fa-solid fa-power-off fa-xl" style="color: #ffffff;"></i>
+                </div>
+                <div class="guide-button">
+                    <a href="index.html">Guide</a>
                 </div>
                 <div class="number-holder">
                     <div class="num-button">
@@ -81,6 +93,25 @@
                     <div class="num-button" style="grid-column: 2; grid-row: 4;">
                         <p>0</p>
                     </div>
+                </div>
+                <div class="control-holder">
+                    <div class="volume-button">
+                        <p style="margin:0;">+</p>
+                        <p style="margin:5px 0;"">VOL</p>
+                        <p style="margin:0;">-</p>
+                    </div>
+                    <div class="channel-button">
+                        <p style="margin:0;">+</p>
+                        <p style="margin:5px 0;"">CHA</p>
+                        <p style="margin:0;">-</p>
+                    </div>
+                </div>
+                <div class="nav-holder">
+                    <div class="nav-button" style="top: 40px; left: 78px;">^</div>
+                    <div class="nav-button" style="top: 175px; left: 78px; transform: rotate(180deg);">^</div>
+                    <div class="select-button">SELECT</div>
+                    <div class="nav-button" style="bottom: -135px; left: 10px; transform:rotate(-90deg);">^</div>
+                    <div class="nav-button" style="bottom: -135px; right: 14px; transform:rotate(90deg);">^</div>
                 </div>
             </div>
         </div>

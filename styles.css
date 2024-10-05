@@ -15,6 +15,15 @@
     src: local('Trade Gothic LT Std Bold Condensed No. 20'), url('fonts/trade-gothic-lt-std-bold-condensed-no-20-5872def1d27d8.woff') format('woff');
     }
 
+body {
+    background-image: url('images/frutiger-aero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    margin: 0;
+}
+
 /*---------- TV -------------------------------------------------------------------------*/
 .tv-holder {
     margin-right: 10px;
@@ -112,7 +121,7 @@
     font-family: 'Trade Gothic LT Std Bold Condensed No. 20', Arial, sans-serif;
     position: absolute;
     left: 5%;
-    top: 2%;
+    top: 1%;
 }
 
 .screen p {
@@ -130,6 +139,25 @@
 
 #welcome-cont {
     top: 20%;
+}
+
+/* formatting for "my channels text" */
+#my-channels {
+    color:rgb(255, 255, 255);
+    z-index: 7;
+    font-size: 14pt;
+    left: 18%;
+    font-weight: bolder;
+    top: 3%;
+    position: absolute;
+    font-family: 'Trade Gothic LT Std Bold Condensed No. 20', Arial, sans-serif;
+}
+
+/* green highlight for "my channels text" */
+#green-light {
+    background-color: #326337;
+    color: white;
+    padding: 2px 5px;
 }
 
 /*---------- CHANNEL 1 - RESUME -------------------------------------------------------*/
@@ -237,6 +265,66 @@
     font-family: 'Arial Narrow', Arial, sans-serif;
 }
 
+/*---------- TIME/DATE FORMATTING  -------------------------------------------------------*/
+/* formatting for current time, date, and day of the week */
+#all-time {
+    color:rgb(255, 255, 255);
+    z-index: 7;
+    font-size: 14pt;
+    left: 18%;
+    font-weight: bolder;
+    top: 7%;
+    position: absolute;
+    font-family: 'Trade Gothic LT Std Bold Condensed No. 20', Arial, sans-serif;
+}
+/* formatting for date and day of the week */
+#time {
+    color:rgb(255, 255, 255);
+    z-index: 7;
+    font-size: 14pt;
+    left: 5%;
+    font-weight: bolder;
+    bottom: 47.5%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+/* formatting for cur time */
+#cur-hour {
+    color:rgb(255, 255, 255);
+    z-index: 7;
+    font-size: 14pt;
+    left: 29.5%;
+    font-weight: bolder;
+    bottom: 47.5%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+/* formatting for thirty min later from cur time */
+#thirty-min {
+    color:rgb(255, 255, 255);
+    z-index: 7;
+    font-size: 14pt;
+    left: 54%;
+    font-weight: bolder;
+    bottom: 47.5%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+/* formatting for one hour later from cur time */
+#one-hour {
+    color:rgb(255, 255, 255);
+    z-index: 7;
+    font-size: 14pt;
+    left: 79%;
+    font-weight: bolder;
+    bottom: 47.5%;
+    position: absolute;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
 
 /*---------- IMAGE SETTINGS (GUIDE)  -------------------------------------------------------*/
 .screen img {
@@ -335,6 +423,155 @@
     text-decoration: none;
     transform: scale(1.1); 
     transition: background-color 0.3s ease;
+}
+
+.guide-button {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(116, 125, 145);
+    box-shadow: 0px 4px 10px rgba(33, 53, 89, 0.5); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: 'Trade Gothic LT Std Bold Condensed No. 20', Arial, sans-serif;
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: absolute;
+    top: 10px;
+    right: 1px;
+}
+
+.guide-button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 15px rgba(33, 53, 89, 0.7); 
+    background-color: rgb(88, 90, 97);
+}
+
+.guide-button a, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.guide-button a:hover {
+    text-decoration: none;
+    transform: scale(1.1); 
+    transition: background-color 0.3s ease;
+}
+
+.nav-holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -75px;
+}
+
+.nav-button {
+    width: 70px;
+    height: 25px;
+    border-radius: 100px 100px 0 0; 
+    position: absolute;
+    z-index: 9;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trade Gothic LT Std Bold Condensed No. 20', Arial, sans-serif;
+    font-size: 15px;
+    background-color: rgb(63, 104, 192);
+    box-shadow: 0px 4px 10px rgba(33, 53, 89, 0.5); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 15px rgba(33, 53, 89, 0.7); 
+    background-color: rgb(48, 83, 159);
+}
+
+.select-button {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(63, 104, 192);
+    box-shadow: 0px 4px 10px rgba(33, 53, 89, 0.5); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 70px;
+    left: 23%;
+    font-size: 18px;
+    font-family: 'Trade Gothic LT Std Bold Condensed No. 20', Arial, sans-serif;
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.select-button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 15px rgba(33, 53, 89, 0.7); 
+    background-color: rgb(48, 83, 159);
+}
+
+.control-holder {
+    display: flex;
+    margin-top: -20px;
+}
+
+.volume-button {
+    width: 50px;
+    height: 90px;
+    background-color: rgb(135, 159, 209);
+    box-shadow: 0px 4px 10px rgba(33, 53, 89, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: 'Trade Gothic LT Std Bold Condensed No. 20', Arial, sans-serif;
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.volume-button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 15px rgba(33, 53, 89, 0.7); 
+    background-color: rgb(105, 128, 179);
+}
+
+.channel-button {
+    width: 50px;
+    height: 90px;
+    background-color: rgb(135, 159, 209);
+    box-shadow: 0px 4px 10px rgba(33, 53, 89, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    position: relative;
+    text-align: center;
+    color: white;
+    right: -90px;
+    font-size: 18px;
+    font-family: 'Trade Gothic LT Std Bold Condensed No. 20', Arial, sans-serif;
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.channel-button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 15px rgba(33, 53, 89, 0.7); 
+    background-color: rgb(105, 128, 179);
 }
 
 .remote-casing {
